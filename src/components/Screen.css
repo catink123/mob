@@ -1,0 +1,14 @@
+.Screen.hidden {
+    opacity: 0.25;
+}
+
+.Screen {
+    left: 0;
+    top: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(../resources/img/bg/grass.jpg);
+    background-size: cover;
+    background-position: 50%;
+}
