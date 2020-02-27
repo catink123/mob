@@ -50,3 +50,25 @@
     background: rgba(255, 255, 255, 0.75);
     color: black;
 }
+
+.ShopScreen .ItemContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    height: calc(100% - 140px);
+}
+
+.ShopScreen .ItemContainer::-webkit-scrollbar {
+    appearance: none;
+}
+
+.ShopScreen .ItemContainer::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.25);
+    width: 10px;
+}
+
+.ShopScreen .ItemContainer::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+}

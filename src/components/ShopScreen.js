@@ -1,6 +1,7 @@
 import Screen from './Screen';
 import React from 'react';
 import './ShopScreen.css';
+import Item from './Item';
 
 class ShopScreen extends Screen {
     constructor(props) {
@@ -36,6 +37,16 @@ class ShopScreen extends Screen {
                             <button>Artifacts</button>
                         </div>
                     </div>
+                </div>
+                <div className="ItemContainer">
+                    <Item quality="Green" />
+                    <Item quality="Red" />
+                    <Item quality="Purple" />
+                    <Item quality="Orange" />
+                    <Item quality="Green" name="Igor durak" />
+                    <Item quality="Red" name="Another Igor durak" />
+                    <Item quality="Purple" />
+                    <Item quality="Orange" />
                 </div>
             </div>
         )
