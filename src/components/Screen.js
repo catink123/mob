@@ -5,14 +5,10 @@ class Screen extends React.Component {
     constructor(props) {
         super(props);
         this.name = this.props.name;
-        this.isMainScreen = this.props.main;
-        this.isVisible = false;
-        if (this.isMainScreen) {
-            this.toggleVisibility(true);
-        }
+        this.className = "";
     }
     
-    toggleVisibility(state) {
+    /* toggleVisibility(state) {
         if (state !== undefined) {
             if (state) {
                 this.isVisible = true;
@@ -26,17 +22,21 @@ class Screen extends React.Component {
                 this.isVisible = true;
             }
         }
+        this.forceUpdate()
     }
+
+    getVisibility() {
+        return(this.isVisible);
+    } */
     
     render() {
-        let className = "Screen";
-        if (this.isVisible) {
-            className = className.replace(" hidden", "");
+        /* if (this.isVisible) {
+            this.className = this.className.replace(" hidden", "");
         } else {
-            className += " hidden";
-        }
+            this.className += " hidden";
+        } */
         return(
-            <div className={className}>
+            <div className={"Screen " + this.className}>
                 {this.props.children}
             </div>
         )

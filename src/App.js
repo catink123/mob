@@ -1,8 +1,14 @@
 import React from 'react';
 import './App.css';
-import 'typeface-roboto';
-import Screen from './components/Screen';
+
+// Screens
+import MainScreen from './components/MainScreen';
+import ShopScreen from './components/ShopScreen';
+
+// Game navigation
 import Menu from './components/Menu';
+
+// Enemy status for main screen
 import EnemyStats from './components/EnemyStats';
 import EnemyImage from './components/EnemyImage';
 
@@ -11,44 +17,61 @@ class App extends React.Component {
         super(props);
         this.enemyStats = React.createRef();
         this.enemyImage = React.createRef();
-        this.dpc = 1
+        this.shopScreen = React.createRef();
+    }
+
+    state = {
+        dpc: 1,
+        dps: 0,
+        coinCount: 0,
+        emeraldCount: 0,
+        shopOpen: false
+    }
+
+    onKill = () => {
+        this.setState({coinCount: this.state.coinCount + 1})
     }
 
     render() {
         return (
-            <div>
-                <Menu menuItems={[{
-                    name: 'Hit',
-                    onClick: () => {
-                        this.enemyStats.current.addEnemyHP(-this.dpc);
-                    }
-                },
-                {
-                    name: 'Nam',
-                    onClick: () => {
-                        this.enemyStats.current.setEnemyName("Igar");
-                    }
-
-                },
+            <div className="App">
+                <Menu menuItems={[
                 {
                     name: '-D',
                     onClick: () => {
-                        this.dpc -= 1;
+                        this.setState({dpc: this.state.dpc - 1})
                     }
                 },
                 {
                     name: '+D',
                     onClick: () => {
-                        this.dpc += 1;
+                        this.setState({dpc: this.state.dpc + 1})
                     }
-                }]} />
-                <Screen main>
-                    <EnemyStats ref={this.enemyStats} />
+                },
+                {
+                    name: 'S',
+                    onClick: () => {
+                        this.setState({shopOpen: !this.state.shopOpen})
+                    }
+                },
+                {
+                    name: 'C',
+                    onClick: () => {
+                        this.setState({coinCount: this.state.coinCount + 1})
+                    }
+                }
+                ]} />
+                <MainScreen>
+                    <EnemyStats ref={this.enemyStats} onKill={this.onKill} />
                     <EnemyImage ref={this.enemyImage} onClick={() => {
-                        this.enemyStats.current.addEnemyHP(-1);
+                        this.enemyStats.current.addEnemyHP(-this.state.dpc);
                     }} />
-                </Screen>
-
+                </MainScreen>
+                {
+                    this.state.shopOpen ?
+                    <ShopScreen currentCoinCount={this.state.coinCount} currentEmeraldCount={this.state.emeraldCount} />
+                    : null
+                }
             </div>
         );
     }

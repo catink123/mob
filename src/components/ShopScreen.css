@@ -1,0 +1,52 @@
+.ShopScreen .TopBar {
+    display: flex;
+    width: 100%;
+    height: 65px;
+    border-bottom: 1px rgba(255, 255, 255, 0.75) solid;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05));
+}
+
+.ShopScreen .TopBar .ScreenName {
+    color: white;
+    margin: auto 15px;
+    /* padding: 16.25px 15px; */
+    font-size: 26px;
+    /* border-right: 1px rgba(255, 255, 255, 0.75) solid; */
+    text-align: center;
+}
+
+.ShopScreen .TopBar .VerticalAlign {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-left: 1px rgba(255, 255, 255, 0.75) solid;
+}
+
+.ShopScreen .TopBar .VerticalAlign div {
+    display: flex;
+    flex-grow: 1;
+}
+
+.ShopScreen .TopBar .VerticalAlign div * {
+    flex-grow: 1;
+}
+
+.ShopScreen .TopBar .VerticalAlign div p {
+    color: white;
+    text-align: center;
+    margin: auto 0;
+}
+
+.ShopScreen .TopBar .VerticalAlign div button {
+    background: rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    transition-duration: .05s;
+}
+
+.ShopScreen .TopBar .VerticalAlign div button:active {
+    background: rgba(255, 255, 255, 0.75);
+    color: black;
+}

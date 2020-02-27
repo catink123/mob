@@ -3,9 +3,14 @@
     height: 100%;
     position: absolute;
     top: 0;
-    object-fit: contain;
     transition-duration: .05s;
     -webkit-user-drag: none;
+}
+
+.EnemyImage img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 
 .EnemyImage:active {

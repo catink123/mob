@@ -13,13 +13,15 @@ class EnemyImage extends React.Component {
 
     changeImage = (path) => {
         this.setState({
-            image: require(path)
+            image: path
         })
     }
 
     render() {
-        return(
-            <img className="EnemyImage" src={this.state.image} alt={this.state.image} onClick={this.onClick} />
+        return (
+            <div className="EnemyImage" onClick={this.onClick}>
+                <img src={this.state.image} alt={this.state.image} draggable={false} />
+            </div>
         )
     }
 }

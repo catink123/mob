@@ -1,0 +1,8 @@
+.MainScreen {
+    backdrop-filter: none;
+    z-index: 0;
+    background: url(../resources/img/bg/grass.jpg);
+    background-size: cover;
+    background-position: 50%;
+    animation: none;
+}

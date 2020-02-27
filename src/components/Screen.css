@@ -1,14 +1,27 @@
+@keyframes fade-in {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
 .Screen.hidden {
-    opacity: 0.25;
+    opacity: 0;
+    display: none;
 }
 
 .Screen {
     left: 0;
     top: 0;
+    position: absolute;
     margin: 0;
     width: 100vw;
     height: 100vh;
-    background: url(../resources/img/bg/grass.jpg);
-    background-size: cover;
-    background-position: 50%;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.25);
+    animation: fade-in .25s;
 }

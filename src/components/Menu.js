@@ -9,7 +9,7 @@ class Menu extends React.Component {
     render() {
         let items = []
         for (var item in this.menuItems) {
-            items.push(<button onClick={this.menuItems[item].onClick}>{this.menuItems[item].name}</button>)
+            items.push(<button onClick={this.menuItems[item].onClick} key={this.menuItems[item].name}>{this.menuItems[item].name}</button>)
         }
         return (
             <div className="Menu">
