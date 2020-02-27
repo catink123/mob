@@ -1,7 +1,7 @@
 .Item {
     display: flex;
     flex-direction: column;
-    width: 220px;
+    width: 200px;
     height: 250px;
     border: 1px rgba(0, 0, 0, 0.75) solid;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25));
