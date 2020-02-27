@@ -1,28 +1,24 @@
 {
   "files": {
-    "main.css": "/mob/static/css/main.d1e8164e.chunk.css",
-    "main.js": "/mob/static/js/main.f35e0ac7.chunk.js",
-    "main.js.map": "/mob/static/js/main.f35e0ac7.chunk.js.map",
+    "main.css": "/mob/static/css/main.b842d1a7.chunk.css",
+    "main.js": "/mob/static/js/main.49c857cc.chunk.js",
+    "main.js.map": "/mob/static/js/main.49c857cc.chunk.js.map",
     "runtime-main.js": "/mob/static/js/runtime-main.2c38b0d4.js",
     "runtime-main.js.map": "/mob/static/js/runtime-main.2c38b0d4.js.map",
-    "static/css/2.ba663410.chunk.css": "/mob/static/css/2.ba663410.chunk.css",
-    "static/js/2.62295847.chunk.js": "/mob/static/js/2.62295847.chunk.js",
-    "static/js/2.62295847.chunk.js.map": "/mob/static/js/2.62295847.chunk.js.map",
+    "static/js/2.c9ecc3e8.chunk.js": "/mob/static/js/2.c9ecc3e8.chunk.js",
+    "static/js/2.c9ecc3e8.chunk.js.map": "/mob/static/js/2.c9ecc3e8.chunk.js.map",
     "index.html": "/mob/index.html",
-    "precache-manifest.a5fc4023818e95042436d736e69fa028.js": "/mob/precache-manifest.a5fc4023818e95042436d736e69fa028.js",
+    "precache-manifest.b27e8f5534e763fa44b46ee611502976.js": "/mob/precache-manifest.b27e8f5534e763fa44b46ee611502976.js",
     "service-worker.js": "/mob/service-worker.js",
-    "static/css/2.ba663410.chunk.css.map": "/mob/static/css/2.ba663410.chunk.css.map",
-    "static/css/main.d1e8164e.chunk.css.map": "/mob/static/css/main.d1e8164e.chunk.css.map",
-    "static/js/2.62295847.chunk.js.LICENSE.txt": "/mob/static/js/2.62295847.chunk.js.LICENSE.txt",
-    "static/media/Screen.css": "/mob/static/media/grass.4da4f1a1.jpg",
-    "static/media/placeholder.png": "/mob/static/media/placeholder.9d36674e.png",
-    "static/media/index.css": "/mob/static/media/roboto-latin-900italic.ebf6d164.woff2"
+    "static/css/main.b842d1a7.chunk.css.map": "/mob/static/css/main.b842d1a7.chunk.css.map",
+    "static/js/2.c9ecc3e8.chunk.js.LICENSE.txt": "/mob/static/js/2.c9ecc3e8.chunk.js.LICENSE.txt",
+    "static/media/MainScreen.css": "/mob/static/media/grass.4da4f1a1.jpg",
+    "static/media/placeholder.png": "/mob/static/media/placeholder.9d36674e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.2c38b0d4.js",
-    "static/css/2.ba663410.chunk.css",
-    "static/js/2.62295847.chunk.js",
-    "static/css/main.d1e8164e.chunk.css",
-    "static/js/main.f35e0ac7.chunk.js"
+    "static/js/2.c9ecc3e8.chunk.js",
+    "static/css/main.b842d1a7.chunk.css",
+    "static/js/main.49c857cc.chunk.js"
   ]
 }
