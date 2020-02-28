@@ -1,11 +1,15 @@
 .Item {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 180px;
     height: 250px;
     border: 1px rgba(0, 0, 0, 0.75) solid;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25));
     margin: 5px;
+}
+
+.Item[hasPrice] {
+    height: 274px !important;
 }
 
 .Item img {
@@ -36,4 +40,15 @@
 
 .Item .Name {
     color: white;
+    font-size: 16px;
+    margin: 10px 2px;
+}
+
+.Item .Price {
+    color: white;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-size: 14px;
+    padding: 2.5px 0;
 }

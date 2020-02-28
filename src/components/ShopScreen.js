@@ -39,7 +39,7 @@ class ShopScreen extends Screen {
                     </div>
                 </div>
                 <div className="ItemContainer">
-                    <Item quality="Green" />
+                    <Item quality="Green" price={20} />
                     <Item quality="Red" />
                     <Item quality="Purple" />
                     <Item quality="Orange" />

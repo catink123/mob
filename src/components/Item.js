@@ -13,7 +13,7 @@ class Item extends React.Component {
 
     render() {
         return(
-            <div className="Item">
+            <div className="Item" hasPrice={this.price !== 0 ? true : false}>
                 <img src={this.image} alt="" />
                 <div className="Quality" quality={this.quality}/>
                 <p className="Name">{this.name}</p>
