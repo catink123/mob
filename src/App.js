@@ -15,6 +15,32 @@ import EnemyImage from './components/EnemyImage';
 class App extends React.Component {
     constructor(props) {
         super(props);
+
+        // Define a database for all JSON game data
+        this.database = {
+            characters: [],
+            weapons: [],
+            artifacts: []
+        }
+
+        // Import the data
+
+        let data = require("./resources/json/data.json")
+        var index
+
+        for (index in data.characters) {
+            this.database.characters.push(require(`./resources/json/characters/${data.characters[index]}.json`));
+        }
+
+        for (index in data.weapons) {
+            this.database.weapons.push(require(`./resources/json/weapons/${data.weapons[index]}.json`));
+        }
+
+        for (index in data.artifacts) {
+            this.database.artifacts.push(require(`./resources/json/artifacts/${data.artifacts[index]}.json`));
+        }
+
+        // Create refs for components
         this.enemyStats = React.createRef();
         this.enemyImage = React.createRef();
         this.shopScreen = React.createRef();
@@ -25,7 +51,12 @@ class App extends React.Component {
         dps: 0,
         coinCount: 0,
         emeraldCount: 0,
-        shopOpen: false
+        shopOpen: false,
+        inventory: {
+            characters: [],
+            weapons: [],
+            artifacts: []
+        }
     }
 
     onKill = () => {
@@ -69,7 +100,7 @@ class App extends React.Component {
                 </MainScreen>
                 {
                     this.state.shopOpen ?
-                    <ShopScreen currentCoinCount={this.state.coinCount} currentEmeraldCount={this.state.emeraldCount} />
+                    <ShopScreen currentCoinCount={this.state.coinCount} currentEmeraldCount={this.state.emeraldCount} database={this.database} />
                     : null
                 }
             </div>

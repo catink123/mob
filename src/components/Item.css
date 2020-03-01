@@ -4,8 +4,14 @@
     width: 180px;
     height: 250px;
     border: 1px rgba(0, 0, 0, 0.75) solid;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25));
+    background: rgba(0, 0, 0, 0.5);
     margin: 5px;
+    transition-duration: .05s;
+}
+
+.Item:active {
+    background: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.75);
 }
 
 .Item[hasPrice] {
@@ -14,7 +20,8 @@
 
 .Item img {
     flex-grow: 1;
-    object-fit: contain;
+    object-fit: cover;
+    width: 100%;
 }
 
 .Item .Quality {
@@ -51,4 +58,13 @@
     text-align: center;
     font-size: 14px;
     padding: 2.5px 0;
+}
+
+.Item:active .Name {
+    color: black;
+}
+
+.Item:active .Price {
+    color: black;
+    background: rgba(255, 255, 255, 0.25);
 }

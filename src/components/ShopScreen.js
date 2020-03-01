@@ -10,11 +10,21 @@ class ShopScreen extends Screen {
         this.className = "ShopScreen";
         this.currentCoinCount = props.currentCoinCount;
         this.currentEmeraldCount = props.currentEmeraldCount;
+        this.database = props.database;
+
+        // Create elements based on database
+
     }
 
     state = {
         coinCount: 0,
-        emeraldCount: 0
+        emeraldCount: 0,
+        currentTab: "characters"
+    }
+
+    changeTab(tab) {
+        this.setState({currentTab: tab});
+        this.forceUpdate();
     }
 
     componentDidMount() {
@@ -32,21 +42,16 @@ class ShopScreen extends Screen {
                             <p>Emeralds: {this.state.emeraldCount}</p>
                         </div>
                         <div>
-                            <button>Characters</button>
-                            <button>Weapons</button>
-                            <button>Artifacts</button>
+                            <button onClick={() => this.changeTab("characters")}>Characters</button>
+                            <button onClick={() => this.changeTab("weapons")}>Weapons</button>
+                            <button onClick={() => this.changeTab("artifacts")}>Artifacts</button>
                         </div>
                     </div>
                 </div>
                 <div className="ItemContainer">
-                    <Item quality="Green" price={20} />
-                    <Item quality="Red" />
-                    <Item quality="Purple" />
-                    <Item quality="Orange" />
-                    <Item quality="Green" name="Igor durak" />
-                    <Item quality="Red" name="Another Igor durak" />
-                    <Item quality="Purple" />
-                    <Item quality="Orange" />
+                    {this.state.currentTab === "characters" ? this.database.characters.map(character => <Item data={character} type="character" inventoryItem={false} />) : null}
+                    {this.state.currentTab === "weapons" ? this.database.weapons.map(weapon => <Item data={weapon} type="weapon" inventoryItem={false} />) : null}
+                    {this.state.currentTab === "artifacts" ? this.database.artifacts.map(artifact => <Item data={artifact} type="artifact" inventoryItem={false} />) : null}
                 </div>
             </div>
         )

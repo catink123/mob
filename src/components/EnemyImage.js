@@ -8,7 +8,7 @@ class EnemyImage extends React.Component {
     }
 
     state = {
-        image: require('../resources/img/enemy/placeholder.png')
+        image: require('../resources/img/enemies/placeholder.png')
     }
 
     changeImage = (path) => {
