@@ -20,7 +20,8 @@ class App extends React.Component {
         this.database = {
             characters: [],
             weapons: [],
-            artifacts: []
+            artifacts: [],
+            enemies: []
         }
 
         // Import the data
@@ -38,6 +39,10 @@ class App extends React.Component {
 
         for (index in data.artifacts) {
             this.database.artifacts.push(require(`./resources/json/artifacts/${data.artifacts[index]}.json`));
+        }
+
+        for (index in data.enemies) {
+            this.database.enemies.push(require(`./resources/json/enemies/${data.enemies[index]}.json`));
         }
 
         // Create refs for components
@@ -61,6 +66,9 @@ class App extends React.Component {
 
     onKill = () => {
         this.setState({coinCount: this.state.coinCount + 1})
+        var random = Math.round(Math.random() * this.database.enemies.length);
+        this.enemyStats.current.setEnemyName(this.database.enemies[random].name);
+        this.enemyImage.current.setImage(this.database.enemies[random].image);
     }
 
     render() {

@@ -9,5 +9,12 @@
     ],
     "artifacts": [
         "ph"
+    ],
+    "enemies": [
+        "igor1",
+        "igor2",
+        "igor3",
+        "igor4",
+        "igor5"
     ]
 }
