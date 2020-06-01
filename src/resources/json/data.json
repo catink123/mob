@@ -5,7 +5,8 @@
         "placeholder"
     ],
     "weapons": [
-        "ph"
+        "ph",
+        "WeaponLVL1"
     ],
     "artifacts": [
         "ph"
