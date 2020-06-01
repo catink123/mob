@@ -49,11 +49,7 @@ class Item extends React.Component {
                 <img src={this.image} alt="" />
                 <div className="Quality" quality={this.quality} />
                 <p className="Name">{this.name}</p>
-                {
-                    this.price !== 0 ?
-                        <p className="Price">{this.price} {this.priceQuantity}</p>
-                        : null
-                }
+                <p className="Price">{this.price !== 0 ? `${this.price} ${this.priceQuantity}` : "No Price"}</p>
             </div>
         )
     }
