@@ -1,0 +1,7 @@
+{
+    "name": "Посох мага",
+    "quality": "Gold",
+    "damage": 25,
+    "price": 100,
+    "image": "+25.png"
+}

@@ -15,7 +15,12 @@
         "WeaponLVL7",
         "WeaponLVL8",
         "WeaponLVL9",
-        "WeaponLVL10"
+        "WeaponLVL10",
+        "+1",
+        "+2",
+        "+5",
+        "+10",
+        "+25"
     ],
     "artifacts": [
         "ph",
