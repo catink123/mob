@@ -1,7 +1,7 @@
 .MainScreen {
     backdrop-filter: none;
     z-index: 0;
-    background: url(../resources/img/bg/grass.jpg);
+    background: url(../resources/img/bg/1_Desert.png);
     background-size: cover;
     background-position: 50%;
     animation: none;
