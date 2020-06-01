@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b35521851aa1d399e39c6cebf6512acf",
+    "revision": "8190deca5201071c2c7f08c38f9c3963",
     "url": "/mob/index.html"
   },
   {
-    "revision": "e996d6b5744210bd1387",
+    "revision": "c030fd7d4b1224e2a493",
     "url": "/mob/static/css/main.e527335d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mob/static/js/2.0a05ceb1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e996d6b5744210bd1387",
-    "url": "/mob/static/js/main.d135faab.chunk.js"
+    "revision": "c030fd7d4b1224e2a493",
+    "url": "/mob/static/js/main.775c1d86.chunk.js"
   },
   {
     "revision": "eb051f09f34fc88e3ec5",
@@ -32,8 +32,60 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mob/static/media/Big_Turtle.05c37a5c.png"
   },
   {
+    "revision": "571119d95389514b5487c0b46e0cb69b",
+    "url": "/mob/static/media/Bone.571119d9.PNG"
+  },
+  {
+    "revision": "77a2a2273b44eca4366c1b7571b43a40",
+    "url": "/mob/static/media/LVL1.77a2a227.PNG"
+  },
+  {
+    "revision": "33555a7174a461c74cb431a352bdad02",
+    "url": "/mob/static/media/LVL10.33555a71.PNG"
+  },
+  {
+    "revision": "136c45ffb07949bd125d7d46d053e424",
+    "url": "/mob/static/media/LVL2.136c45ff.png"
+  },
+  {
+    "revision": "0c589041b0fb1eb92f125962df8d639b",
+    "url": "/mob/static/media/LVL3.0c589041.png"
+  },
+  {
+    "revision": "4b5927bd94476706af75bdd5711cf03e",
+    "url": "/mob/static/media/LVL4.4b5927bd.png"
+  },
+  {
+    "revision": "461262831c5b31decab93c3532d428a2",
+    "url": "/mob/static/media/LVL5.46126283.png"
+  },
+  {
+    "revision": "35759ab9ca3ec4fc56899db6c5aba2ee",
+    "url": "/mob/static/media/LVL6.35759ab9.png"
+  },
+  {
+    "revision": "408b105a67c592ffd1474f53d11de204",
+    "url": "/mob/static/media/LVL7.408b105a.png"
+  },
+  {
+    "revision": "ccea9964b7f5ebcc9edb8ea4ba5d502f",
+    "url": "/mob/static/media/LVL8.ccea9964.png"
+  },
+  {
+    "revision": "19691fa05f14b2c2c84c0878ae33b1f7",
+    "url": "/mob/static/media/LVL9.19691fa0.PNG"
+  },
+  {
     "revision": "6f5063c7cc3f01ea09288a768d1b1ec8",
     "url": "/mob/static/media/Lizzard.6f5063c7.png"
+  },
+  {
+    "revision": "831e247cb479d0fd47b3aba9577c343d",
+    "url": "/mob/static/media/MagicFruit.831e247c.PNG"
+  },
+  {
+    "revision": "c4551420d7c7155aa9882e58341f0a7b",
+    "url": "/mob/static/media/MagicStone1.c4551420.PNG"
   },
   {
     "revision": "d2263affa5b65edac5ad0690c0a98654",
