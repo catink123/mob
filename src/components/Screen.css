@@ -29,5 +29,6 @@
 @media only screen and (min-width: 768px) {
     .Screen {
         margin-left: 75px;
+        width: calc(100vw - 75px);
     }
 }
