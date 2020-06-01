@@ -18,7 +18,11 @@
         "WeaponLVL10"
     ],
     "artifacts": [
-        "ph"
+        "ph",
+        "MagicRing",
+        "MagicAmulet",
+        "MagicSword",
+        "ShamanAmulet"
     ],
     "enemies": [
         "igor1",
