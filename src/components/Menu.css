@@ -16,6 +16,7 @@
     border: none;
     margin: 10px;
     width: 55px;
+    height: 55px;
     color: white;
     font-size: 24px;
     transition-duration: .05s;
@@ -26,4 +27,15 @@
 .Menu button:active {
     background: rgba(255, 255, 255, 0.75);
     color: black;
+}
+
+@media only screen and (min-width: 768px) {
+    .Menu {
+        width: 75px;
+        height: 100%;
+        flex-direction: column;
+        border-top: none;
+        border-right: rgba(255, 255, 255, 0.75) solid 1px;
+        background: linear-gradient(-90deg, transparent, rgba(0, 0, 0, 0.5));
+    }
 }

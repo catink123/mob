@@ -36,3 +36,11 @@
     border-bottom: none;
     font-size: 18px;
 }
+
+@media only screen and (min-width: 768px) {
+    .EnemyStats {
+        margin: 0 15%;
+        border-left: rgba(255, 255, 255, 0.75) 1px solid;
+        border-right: rgba(255, 255, 255, 0.75) 1px solid;
+    }
+}
