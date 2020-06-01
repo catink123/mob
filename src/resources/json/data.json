@@ -6,7 +6,16 @@
     ],
     "weapons": [
         "ph",
-        "WeaponLVL1"
+        "WeaponLVL1",
+        "WeaponLVL2",
+        "WeaponLVL3",
+        "WeaponLVL4",
+        "WeaponLVL5",
+        "WeaponLVL6",
+        "WeaponLVL7",
+        "WeaponLVL8",
+        "WeaponLVL9",
+        "WeaponLVL10"
     ],
     "artifacts": [
         "ph"
