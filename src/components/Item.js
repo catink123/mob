@@ -5,21 +5,6 @@ class Item extends React.Component {
     constructor(props) {
         super(props);
 
-        // // If itemID exists, then populate properties based on that
-        // this.itemID = props.itemID ? props.itemID : "any.any";
-        // if (this.itemID !== "any.any") {
-        //     // Split itemID into type and name
-        //     var splitText = this.itemID.split(".")
-        //     this.itemClass = {
-        //         type: splitText[0],
-        //         name: splitText[1]
-        //     }
-
-        //     if (this.itemClass.type == "character") {
-
-        //     }
-
-        // If data exists, then populate properties based on that
         if (props.data !== undefined && props.type !== undefined) {
             this.name = props.data.name;
             this.quality = props.data.quality;
@@ -34,19 +19,21 @@ class Item extends React.Component {
                 this.priceQuantity = "Emeralds";
                 this.image = require(`../resources/img/artifacts/${props.data.image}`)
             }
+            this.onClick = props.onClick;
         } else {
             this.name = props.name ? props.name : "Item";
             this.quality = props.quality ? props.quality : "Green";
             this.price = props.price ? props.price : 0;
             this.priceQuantity = props.priceQuantity ? props.priceQuantity : "Gold";
             this.image = props.image ? props.image : require("../resources/img/enemies/placeholder.png");
+            this.onClick = null;
         }
     }
 
     render() {
         return (
-            <div className="Item" hasPrice={this.price !== 0 ? true : false}>
-                <img src={this.image} alt="" />
+            <div className="Item" hasPrice={this.price !== 0 ? true : false} onClick={this.onClick}>
+                <img src={this.image} alt="" draggable={false} />
                 <div className="Quality" quality={this.quality} />
                 <p className="Name">{this.name}</p>
                 <p className="Price">{this.price !== 0 ? `${this.price} ${this.priceQuantity}` : "No Price"}</p>

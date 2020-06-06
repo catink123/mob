@@ -1,0 +1,86 @@
+@keyframes showAnimation {
+    0% {
+        transform: translateY(100%) translateX(-50%);
+    }
+
+    100% {
+        transform: translateY(0%) translateX(-50%);
+    }
+}
+
+.Dialog {
+    width: 100%;
+    border-top: solid 1px rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05));
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    bottom: 75px;
+    animation: showAnimation 0.25s;
+}
+
+.Dialog.HasImage {
+    height: calc(100% - 75px);
+    border-top: none;
+}
+
+.Dialog .Actions {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    flex-direction: row;
+    border-top: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.Dialog p {
+    color: white;
+    margin: 5px;
+    font-size: 16px;
+}
+
+.Dialog .Title {
+    font-size: 20px;
+}
+
+.Dialog button.Action {
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.75);
+    transition-duration: 0.05s;
+    outline: none;
+}
+
+.Dialog button.Action:last-child {
+    border-right: none;
+}
+
+.Dialog button.Action:active {
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+.Dialog .Image {
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.25);
+    margin: 5px;
+    flex-grow: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    .Dialog {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.75);
+        border-bottom: none;
+    }
+
+    .Dialog.HasImage {
+        height: 100%;
+    }
+}

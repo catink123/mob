@@ -12,6 +12,9 @@ import Menu from './components/Menu';
 import EnemyStats from './components/EnemyStats';
 import EnemyImage from './components/EnemyImage';
 
+// Dialog for confirmation or other info
+import Dialog from './components/Dialog';
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -49,6 +52,11 @@ class App extends React.Component {
         this.enemyStats = React.createRef();
         this.enemyImage = React.createRef();
         this.shopScreen = React.createRef();
+
+        // Initial setup for enemy
+        // var random = Math.round(Math.random() * this.database.enemies.length);
+        // this.enemyStats.current.setEnemyName(this.database.enemies[random].name);
+        // this.enemyImage.current.setImage(this.database.enemies[random].image);
     }
 
     state = {
@@ -61,44 +69,53 @@ class App extends React.Component {
             characters: [],
             weapons: [],
             artifacts: []
-        }
+        },
+        dialogOpen: true
     }
 
-    onKill = () => {
-        this.setState({coinCount: this.state.coinCount + 1})
+    updateCoins = (amount) => {
+        this.setState({ coinCount: this.state.coinCount + amount })
+    }
+
+    randomEnemy = () => {
         var random = Math.round(Math.random() * this.database.enemies.length);
         this.enemyStats.current.setEnemyName(this.database.enemies[random].name);
         this.enemyImage.current.setImage(this.database.enemies[random].image);
+    }
+
+    onKill = () => {
+        this.updateCoins(1);
+        this.randomEnemy();
     }
 
     render() {
         return (
             <div className="App">
                 <Menu menuItems={[
-                {
-                    name: '-D',
-                    onClick: () => {
-                        this.setState({dpc: this.state.dpc - 1})
+                    {
+                        name: '-D',
+                        onClick: () => {
+                            this.setState({ dpc: this.state.dpc - 1 })
+                        }
+                    },
+                    {
+                        name: '+D',
+                        onClick: () => {
+                            this.setState({ dpc: this.state.dpc + 1 })
+                        }
+                    },
+                    {
+                        name: 'S',
+                        onClick: () => {
+                            this.setState({ shopOpen: !this.state.shopOpen })
+                        }
+                    },
+                    {
+                        name: 'C',
+                        onClick: () => {
+                            this.setState({ coinCount: this.state.coinCount + 1 })
+                        }
                     }
-                },
-                {
-                    name: '+D',
-                    onClick: () => {
-                        this.setState({dpc: this.state.dpc + 1})
-                    }
-                },
-                {
-                    name: 'S',
-                    onClick: () => {
-                        this.setState({shopOpen: !this.state.shopOpen})
-                    }
-                },
-                {
-                    name: 'C',
-                    onClick: () => {
-                        this.setState({coinCount: this.state.coinCount + 1})
-                    }
-                }
                 ]} />
                 <MainScreen>
                     <EnemyStats ref={this.enemyStats} onKill={this.onKill} />
@@ -108,8 +125,27 @@ class App extends React.Component {
                 </MainScreen>
                 {
                     this.state.shopOpen ?
-                    <ShopScreen currentCoinCount={this.state.coinCount} currentEmeraldCount={this.state.emeraldCount} database={this.database} />
-                    : null
+                        <ShopScreen currentCoinCount={this.state.coinCount} currentEmeraldCount={this.state.emeraldCount} database={this.database} />
+                        : null
+                }
+                {
+                    this.state.dialogOpen ?
+                        <Dialog
+                            text="Text"
+                            title="Title"
+                            image="../resources/img/characters/placeholder.png"
+                            onClose={() => { this.setState({ dialogOpen: false }) }}
+                            actions={[
+                                {
+                                    label: "OK",
+                                    onClick: "closeDialog"
+                                },
+                                {
+                                    label: "2nd Button",
+                                    onClick: () => { }
+                                }
+                            ]} />
+                        : null
                 }
             </div>
         );

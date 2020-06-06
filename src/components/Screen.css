@@ -1,4 +1,4 @@
-@keyframes fade-in {
+@keyframes slideAnimation {
     from {
         transform: translateY(100%);
     }
@@ -23,7 +23,7 @@
     backdrop-filter: blur(10px);
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.25);
-    animation: fade-in .25s;
+    animation: slideAnimation .25s;
 }
 
 @media only screen and (min-width: 768px) {
