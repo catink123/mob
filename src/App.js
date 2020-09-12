@@ -19,6 +19,9 @@ class App extends React.Component {
     constructor(props) {
         super(props);
 
+        // Change tab title
+        document.title = "Mansion of Blood";
+
         // Define a database for all JSON game data
         this.database = {
             characters: [],
@@ -57,6 +60,8 @@ class App extends React.Component {
         // var random = Math.round(Math.random() * this.database.enemies.length);
         // this.enemyStats.current.setEnemyName(this.database.enemies[random].name);
         // this.enemyImage.current.setImage(this.database.enemies[random].image);
+
+
     }
 
     state = {
@@ -70,7 +75,7 @@ class App extends React.Component {
             weapons: [],
             artifacts: []
         },
-        dialogOpen: true
+        dialogOpen: false
     }
 
     updateCoins = (amount) => {
@@ -93,28 +98,12 @@ class App extends React.Component {
             <div className="App">
                 <Menu menuItems={[
                     {
-                        name: '-D',
-                        onClick: () => {
-                            this.setState({ dpc: this.state.dpc - 1 })
-                        }
-                    },
-                    {
-                        name: '+D',
-                        onClick: () => {
-                            this.setState({ dpc: this.state.dpc + 1 })
-                        }
-                    },
-                    {
                         name: 'S',
                         onClick: () => {
-                            this.setState({ shopOpen: !this.state.shopOpen })
-                        }
-                    },
-                    {
-                        name: 'C',
-                        onClick: () => {
-                            this.setState({ coinCount: this.state.coinCount + 1 })
-                        }
+                            // this.setState({ shopOpen: !this.state.shopOpen })
+                            this.shopScreen.current.isOpen = !this.shopScreen.current.isOpen;
+                        },
+                        icon: 'ShopIcon'
                     }
                 ]} />
                 <MainScreen>
@@ -123,11 +112,11 @@ class App extends React.Component {
                         this.enemyStats.current.addEnemyHP(-this.state.dpc);
                     }} />
                 </MainScreen>
-                {
-                    this.state.shopOpen ?
-                        <ShopScreen currentCoinCount={this.state.coinCount} currentEmeraldCount={this.state.emeraldCount} database={this.database} />
-                        : null
-                }
+                <ShopScreen ref={this.shopScreen}
+                            currentCoinCount={this.state.coinCount} 
+                            currentEmeraldCount={this.state.emeraldCount} 
+                            database={this.database}
+                            isOpen={false} />
                 {
                     this.state.dialogOpen ?
                         <Dialog

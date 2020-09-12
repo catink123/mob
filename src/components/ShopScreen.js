@@ -11,9 +11,7 @@ class ShopScreen extends Screen {
         this.currentCoinCount = props.currentCoinCount;
         this.currentEmeraldCount = props.currentEmeraldCount;
         this.database = props.database;
-
-        // Create elements based on database
-
+        this.isOpen = props.isOpen;
     }
 
     state = {
@@ -32,7 +30,8 @@ class ShopScreen extends Screen {
     }
 
     render() {
-        return (
+        return (<>
+            { this.isOpen ?
             <div className={"Screen " + this.className}>
                 <div className="TopBar">
                     <p className="ScreenName">Shop</p>
@@ -54,6 +53,8 @@ class ShopScreen extends Screen {
                     {this.state.currentTab === "artifacts" ? this.database.artifacts.map(artifact => <Item data={artifact} type="artifact" inventoryItem={false} />) : null}
                 </div>
             </div>
+            : null}
+            </>
         )
     }
 }

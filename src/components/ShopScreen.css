@@ -57,7 +57,7 @@
     align-items: center;
     justify-content: center;
     overflow: auto;
-    height: calc(100% - 140px);
+    height: calc(100% - 65px);
 }
 
 .ShopScreen .ItemContainer::-webkit-scrollbar {
@@ -71,10 +71,4 @@
 
 .ShopScreen .ItemContainer::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.5);
-}
-
-@media only screen and (min-width: 768px) {
-    .ShopScreen .ItemContainer {
-        height: calc(100% - 65px);
-    }
 }
